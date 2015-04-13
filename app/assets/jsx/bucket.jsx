@@ -15,7 +15,7 @@ define(['react', 'tagging', 'tags'], function(React, Tagging, Tags) {
         {this.props.name}<br/>
         </a>
         <Tags
-        tags = {this.state.tags}
+        tags = {this.getEffectiveTags()}
         handleAddTag = {this.handleAddTag}
         handleRemoveTag = {this.handleRemoveTag} />
         </h1>
@@ -45,7 +45,7 @@ define(['react', 'tagging', 'tags'], function(React, Tagging, Tags) {
         </a>
         </h1>
         <Tags
-        tags = {this.state.tags}
+        tags = {this.getEffectiveTags()}
         handleAddTag = {this.handleAddTag}
         handleRemoveTag = {this.handleRemoveTag} />
         <time>{this.props.dump.ageLabel}</time>
